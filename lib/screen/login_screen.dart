@@ -1,4 +1,3 @@
-import 'package:chat_app/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,11 +7,13 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: Column(children: [
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(children: [
+            const SizedBox(height: 32,),
+
             const Text(
               'Hello, Welcome back!',
               style: TextStyle(
@@ -25,8 +26,8 @@ class LoginScreen extends StatelessWidget {
               height: 16,
             ),
             const Text('Login to continue',
-                style:
-                    TextStyle(color: Colors.white, fontFamily: 'Times New Roman')),
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Times New Roman')),
             const SizedBox(
               height: 16,
             ),
@@ -68,12 +69,10 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
+               child: ElevatedButton(
                   onPressed: () {
                     print('Login is clicked');
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                      return HomeScreen();
-                    }));
+                    Navigator.of(context).pushNamed('/home');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
@@ -81,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: const Text('Log in')),
             ),
-            const SizedBox(height:64),
+            const SizedBox(height: 64),
             const Text(
               'Or sign in with',
               style: TextStyle(
@@ -150,12 +149,14 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const Text(
                   'Don\'t have an account?',
-                  style:
-                      TextStyle(color: Colors.white, fontFamily: 'Times New Roman'),
+                  style: TextStyle(
+                      color: Colors.white, fontFamily: 'Times New Roman'),
                 ),
                 TextButton(
                     style: TextButton.styleFrom(foregroundColor: Colors.amber),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/signup');
+                    },
                     child: const Text('Sign up',
                         style: TextStyle(
                           decoration: TextDecoration.underline,
@@ -163,9 +164,9 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             const Spacer(),
-                ]),
-              ),
-          ),
-        ));
+          ]),
+        ),
+      ),
+    ));
   }
 }
