@@ -4,13 +4,10 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/13octt/Chat-App/assets/88072761/72b8030e-3171-4af0-87c3-e110e0dc35da)
+![image](https://github.com/13octt/Chat-App/assets/88072761/6d7b3eb2-6841-476b-bce6-0dc119cacfd1)
+![image](https://github.com/13octt/Chat-App/assets/88072761/556b1359-b48d-47a9-aa8f-24aca8266205)
+![image](https://github.com/13octt/Chat-App/assets/88072761/39081aad-14d0-46a8-ae5f-a92a847914af)
+![image](https://github.com/13octt/Chat-App/assets/88072761/30612a67-1aa3-4eac-b160-de11e7783eb5)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
