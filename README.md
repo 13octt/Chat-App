@@ -1,9 +1,7 @@
-# chat_app
+# Function
+- Login, Register, News Feed, Favorite, Add Post, Chat, Profile
 
-A new Flutter project.
-
-## Getting Started
-
+## Desgin App
 ![image](https://github.com/13octt/Chat-App/assets/88072761/72b8030e-3171-4af0-87c3-e110e0dc35da)
 ![image](https://github.com/13octt/Chat-App/assets/88072761/6d7b3eb2-6841-476b-bce6-0dc119cacfd1)
 ![image](https://github.com/13octt/Chat-App/assets/88072761/556b1359-b48d-47a9-aa8f-24aca8266205)
