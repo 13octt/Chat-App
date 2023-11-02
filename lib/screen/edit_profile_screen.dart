@@ -1,5 +1,7 @@
+import 'package:chat_app/components/textfield.dart';
 import 'package:chat_app/style/app_colors.dart';
 import 'package:flutter/material.dart';
+import '../components/toolbar.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});
@@ -8,7 +10,36 @@ class EditProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        // title: const CustomToolbar(title: 'Edit Profile', actions: [
+        //   Icon(Icons.outbond),
+        // ]),
+        // actions: [
+        //   PopupMenuButton(
+        //       // onSelected: (String result) {
+        //       //   // Handle menu item selection here
+        //       //   if (result == 'Option 1') {
+        //       //     // Handle Option 1
+        //       //   } else if (result == 'Option 2') {
+        //       //     // Handle Option 2
+        //       //   } else if (result == 'Option 3') {
+        //       //     // Handle Option 3
+        //       //   }
+        //       // },
+        //       itemBuilder: (context) => <PopupMenuEntry<String>>[
+        //             const PopupMenuItem<String>(
+        //               value: 'Option 1',
+        //               child: Text('Option 1'),
+        //             ),
+        //             const PopupMenuItem<String>(
+        //               value: 'Option 2',
+        //               child: Text('Option 2'),
+        //             ),
+        //             const PopupMenuItem<String>(
+        //               value: 'Option 3',
+        //               child: Text('Option 3'),
+        //             ),
+        //           ])
+        // ],
         backgroundColor: AppColors.background,
       ),
       body: SingleChildScrollView(
@@ -23,98 +54,51 @@ class EditProfileScreen extends StatelessWidget {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
-                    'assets/images/google.webp',
+                    'assets/images/user.png',
+                    color: Colors.white,
                   )),
             ),
             const SizedBox(
               height: 64,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(.5),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    labelText: 'First Name',
-                    hintText: 'Alex'),
-              ),
+            const CustomTextField(
+              label: 'First Name',
+              hint: 'John',
             ),
             const SizedBox(
               height: 16,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(.5),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    labelText: 'Last Name',
-                    hintText: 'John'),
-              ),
+            const CustomTextField(
+              label: 'Last Name',
+              hint: 'Alex',
             ),
             const SizedBox(
               height: 16,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(.5),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    labelText: 'Phone number',
-                    hintText: '+84 113'),
-              ),
+            const CustomTextField(
+              label: 'Phone Number',
+              hint: '+84 113',
             ),
             const SizedBox(
               height: 16,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(.5),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    labelText: 'Location',
-                    hintText: 'Ho Chi Minh City'),
-              ),
+            const CustomTextField(
+              label: 'Location',
+              hint: 'Ho Chi Minh',
             ),
             const SizedBox(
               height: 16,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(.5),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    labelText: 'Birthday',
-                    hintText: '13 October 2002'),
-              ),
+            const CustomTextField(
+              label: 'Birthday',
+              hint: '30/2/1945',
             ),
             const SizedBox(
               height: 16,
             ),
-            SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(.5),
-                  border: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                  labelText: 'Gender',
-                ),
-              ),
+            const CustomTextField(
+              label: 'Gender',
+              hint: 'Man',
             ),
             const Row(
               children: [
@@ -177,5 +161,14 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         });
       },
     );
+  }
+}
+
+class CustomPopupMenu extends StatelessWidget {
+  const CustomPopupMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

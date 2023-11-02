@@ -12,13 +12,13 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(children: [
-            const SizedBox(height: 32,),
-
+            const SizedBox(
+              height: 32,
+            ),
             const Text(
               'Hello, Welcome back!',
               style: TextStyle(
                   fontSize: 22,
-                  fontFamily: 'Times New Roman',
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
             ),
@@ -26,8 +26,7 @@ class LoginScreen extends StatelessWidget {
               height: 16,
             ),
             const Text('Login to continue',
-                style: TextStyle(
-                    color: Colors.white, fontFamily: 'Times New Roman')),
+                style: TextStyle(color: Colors.white)),
             const SizedBox(
               height: 16,
             ),
@@ -62,17 +61,14 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.topRight,
               child: TextButton(
                   style: TextButton.styleFrom(foregroundColor: Colors.white),
-                  onPressed: () {
-                    print('Forgot is clicked');
-                  },
+                  onPressed: () {},
                   child: const Text('Forgot password?')),
             ),
             SizedBox(
               width: double.infinity,
-               child: ElevatedButton(
+              child: ElevatedButton(
                   onPressed: () {
-                    print('Login is clicked');
-                    Navigator.of(context).pushNamed('/home');
+                    Navigator.of(context).pushNamed('/main');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
@@ -93,9 +89,7 @@ class LoginScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(50)))),
-                onPressed: () {
-                  print('Google is clicked');
-                },
+                onPressed: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -121,9 +115,7 @@ class LoginScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(50)))),
-                onPressed: () {
-                  print('Facbook is clicked');
-                },
+                onPressed: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
